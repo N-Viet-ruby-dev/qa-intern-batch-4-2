@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-md-12">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to "QAENGINE", root_path, class: "col-md-3 navbar-brand" %>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="form-inline">
+          <%= form_tag({}, {method: :get}) do %>
+            <%= text_field_tag :search, "", class: "form-control mr-sm-2" %>
+            <%= button_tag "Search", :class => "btn btn-primary m-sm-3 my-sm-0" %>
+          <% end %>
+        </div>
+        <ul class="navbar-nav ml-md-auto">
+          <%= link_to "Home", "#", class: "nav-link" %>
+          <li class="nav-item dropdown">
+            <%= link_to "About us", "#", class: "nav-link dropdown-toggle",
+              data: {toggle: "dropdown"} %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <%= link_to "User", "#", class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Questions Listing", "#", class: "dropdown-item" %>
+            </div>
+          </li>
+          <%= link_to "Blog", "#", class: "nav-link" %>
+          <%= link_to "Term", "#", class: "nav-link" %>
+          <%= link_to "Contact", "#", class: "nav-link" %>
+          <li class="nav-item active">
+            <%= link_to "Login or Register", "#", class: "nav-link",
+              data:{toggle: "modal", target: "#signin"} %>
+          </li>
+            <!-- Modal Login -->
+            <div class="modal fade signin-form" id="signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign in</h5>
+                    <%= button_tag :class => "close", "data-dismiss" => "modal", "aria-label"=>"Close" do %>
+                      <span aria-hidden="true">&times;</span>
+                    <% end %>
+                  </div>
+                      <div class="modal-body">
+                        <%= render "sessions/form_signin" %>
+                      </div>
+                  <div class="modal-footer">
+                    <%= link_to "Sign up here", "#", class: "btn-signup-form",
+                      data:{toggle: "modal", target: "#signup"} %><span> or sign in with</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Register -->
+            <div class="modal fade signup-form" id="signup" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+                    <%= button_tag :class => "close", "data-dismiss" => "modal", "aria-label"=>"Close" do %>
+                      <span aria-hidden="true">&times;</span>
+                    <% end %>
+                  </div>
+                  <div class="modal-body">
+                    <%= render "users/form_signup" %>
+                    <div class="modal-footer">
+                      <%= link_to "Sign in", "#", class: "btn-signin-form",
+                        data:{toggle: "modal", target: "#signin"} %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

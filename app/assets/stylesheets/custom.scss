@@ -1,0 +1,143 @@
+@import 'bootstrap';
+@import "font-awesome";
+
+.col-md-2.right,
+.col-md-2.left {
+    background: #eef1f7;
+}
+.col-md-12 {
+    background: #f8f9fa;
+}
+.col-md-2 ul li {
+    list-style: none;
+}
+.col-md-2.left{
+  padding: 20px 0 20px 0px;
+  border-right: 1px solid #ccc;
+}
+.col-md-2.right{
+  padding: 20px 20px 20px 0;
+}
+li.widget.widget-statistic {
+    padding: 20px 0px 20px 0px;
+    margin: 0px -15px;
+}
+ul.widget.wiget-count {
+    margin-left: -30px;
+}
+li.question-count {
+    border-left: 4px solid #3498db;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    p{
+      font-size: 16px;
+      color: #7a838e;
+      padding-left: 7px;
+      margin: 0;
+    }
+    span{
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 30px;
+      display: block;
+      color: #2c3e50;
+      padding-top: 5px;
+      margin-left: 8px;
+    }
+}
+
+li.member-count {
+    border-left: 4px solid #f39c12;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    p{
+      font-size: 16px;
+      color: #7a838e;
+      padding-left: 7px;
+      margin: 0;
+    }
+    span{
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 30px;
+      display: block;
+      color: #2c3e50;
+      padding-top: 5px;
+      margin-left: 8px;
+    }
+}
+li.widget.widget-related-tags h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid #dadfea;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+li.widget.widget-related-tags ul {
+  margin-left: -40px;
+  li a{
+    border: 1px solid #d9dfe9;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #f3f5f9;
+    text-decoration: none;
+    color: #6f7d95;
+    line-height: 20px;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 5px 5px 0 0;
+  }
+}
+.widget.widget-btn {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+#menu-left-menu-container ul li{
+  list-style: none;
+}
+ul#menu-left-menu-1 {
+  margin: 0px 0px 0px -25px;
+  border-bottom: 1px solid #ccc;
+  li a {
+    width: 100%;
+    text-decoration: none;
+    padding: 10px 0 10px 16px;
+    display: block;
+    color: #78829d;
+    border-left: 4px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 13px;
+
+  }
+  li a:hover{
+    border-left: 4px solid #f39c12;
+    background: #f8f9fa ;
+  }
+}
+input#user_picture {
+    width: 100%;
+    padding: 10px 0;
+}
+label.checkbox.inline {
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+.copyright {
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    color: #78829d;
+    font-size: 13px;
+    a{
+      text-decoration: none;
+    }
+}
