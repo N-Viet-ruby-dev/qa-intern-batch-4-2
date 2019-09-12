@@ -1,0 +1,44 @@
+<div id="answer_<%= answer.id %>">
+  <div class="row answers">
+    <div class="col-md-1 votes-answer">
+      <ul>
+        <li title="" data-original-title="This is useful.">
+          <%= link_to "#", class: "action vote vote-up img-circle" do %>
+            <i class="fa fa-chevron-up"></i>
+          <% end %>
+        </li>
+        <li class="vote-count">
+          <span itemprop="upvoteCount" class="vote-count">0</span>
+        </li>
+        <li title="" data-original-title="This is not useful">
+          <%= link_to "#", class: "action vote vote-down img-circle" do %>
+            <i class="fa fa-chevron-down"></i>
+          <% end %>
+        </li>
+        <li class="single-question-pump" data-original-title="" title="">
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-1 answer">
+      <div class="picture-user-answer">
+        <%= image_tag answer.user.picture.url %>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h6><%= link_to answer.user.name, answer.user %><i class="cr-answer">answer <%= time_ago_in_words(answer.created_at) %> ago</i>
+        <% if current_user?(answer.user) %>
+          <div class="links btn-group-action">
+            <%= link_to question_answer_path(answer.question, answer), method:
+              :delete, remote: true do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+            <%= link_to edit_question_answer_path(answer.question, answer), remote: true do %>
+              <i class="fa fa-edit"></i>
+            <% end %>
+          </div>
+        <% end %>
+      </h6>
+      <div class="answer-content"><span><%= raw answer.content %></span></div>
+    </div>
+  </div>
+</div>

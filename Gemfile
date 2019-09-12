@@ -25,7 +25,8 @@ gem "select2-rails"
 gem "turbolinks", "~> 5"
 gem "toastr-rails"
 gem "uglifier", ">= 1.3.0"
-gem "will_paginate", "3.1.8"
+gem "kaminari"
+gem "bootstrap4-kaminari-views"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

@@ -1,0 +1,1 @@
+$("#answer_<%= @answer.id %> .answer-content").html('<%= j render "answers/form", answer: @answer, question: @answer.question, btn_text: "Update Answer", action: "edit_#{@answer.id}" %>');

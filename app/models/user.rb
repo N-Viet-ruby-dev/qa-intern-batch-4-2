@@ -5,6 +5,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :reset_token
 
   has_many :questions, dependent: :destroy
+  has_many :answers, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 },

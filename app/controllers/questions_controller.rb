@@ -7,7 +7,11 @@ class QuestionsController < ApplicationController
     @questions = current_user.questions.newest.paginate page: params[:page], per_page: 5
   end
 
-  def show; end
+  def show
+    rows = @question.answers.newest.includes(:user)
+    @answers = Kaminari.paginate_array(rows).page(params[:page]).per(5)
+    @answer = @question.answers.build
+  end
 
   def new
     @question = current_user.questions.new

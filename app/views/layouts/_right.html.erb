@@ -15,8 +15,8 @@
     <li class="widget widget-related-tags">
       <h3>MOST USED TAGS</h3>
       <ul id="widget widget-related-right">
-        <% tag_all.each do |tag| %>
-        <li><%= link_to tag.name, "#", class: "q-tag" %></li>
+        <% tag_hot.each do |name,total| %>
+        <li><%= link_to name, "#", class: "q-tag" %> <span class="tags">x <%= total %></span></li>
         <% end %>
       </ul>
     </li>

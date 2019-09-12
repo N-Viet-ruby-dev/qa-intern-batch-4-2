@@ -2,7 +2,7 @@
   <div class="col-md-8 questions">
     <blockquote class="blockquote">
       <p class="question">
-        <%= question.title %>
+        <%= link_to question.title, question %>
       </p>
       <p class="anwser">
         <%= raw question.content %>
@@ -13,6 +13,9 @@
       </div>
     </blockquote>
     <div class="bottom-questions">
+      <div class="picture-user-question">
+        <%= image_tag question.user.picture.url %>
+      </div>
       <%= link_to question.user.name, question.user %>
       <span class="time"> | Asked on: <%= question.created_at %> </span>
     </div>
@@ -21,8 +24,8 @@
     <ul class="question-statistic">
       <li class="active">
         <span itemprop="answerCount" class="question-answers">
-          3
-        </span> answers
+          <%= question.answers.count %>
+        </span>answers
       </li>
       <li>
         <span itemprop="upvoteCount" class="question-votes">

@@ -1,0 +1,6 @@
+<% if @answer.errors.any? %>
+  alert("No data");
+<% else %>
+  CKEDITOR.instances.editor_create.setData('')
+  $("#answer-list").html('<%= j render "questions/answer_paginate", answers: @answers %>');
+<% end %>

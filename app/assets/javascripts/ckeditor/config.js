@@ -1,6 +1,7 @@
 CKEDITOR.editorConfig = function( config ) {
   config.language = 'en';
   config.uiColor = '#ffffff';
+  config.height = '7em'
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
@@ -38,4 +39,5 @@ CKEDITOR.editorConfig = function( config ) {
     { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
   ];
+  config.toolbar = "mini";
 };

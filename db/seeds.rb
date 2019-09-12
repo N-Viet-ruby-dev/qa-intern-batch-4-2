@@ -21,7 +21,7 @@ User.create!(name:  "Admin",
 10.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
-  phone = Faker::Number.leading_zero_number(digits: 10)
+  phone = "0935535325"
   address = Faker::Address.full_address
   picture = nil
   password = "password"

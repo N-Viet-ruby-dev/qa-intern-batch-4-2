@@ -8,7 +8,7 @@ module ApplicationHelper
     end
   end
 
-  def tag_all
-    Tag.all
+  def tag_hot
+    tags = QuestionTag.joins(:tag).group(:name).count.sort_by {|name,total| total}.reverse
   end
 end
